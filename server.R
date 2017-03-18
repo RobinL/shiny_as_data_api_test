@@ -1,5 +1,4 @@
 library(shiny)
-library(tibble)
 
 # Define server logic for random distribution application
 shinyServer(function(input, output,session) {
@@ -10,8 +9,10 @@ shinyServer(function(input, output,session) {
     
     # Reverse the text input server side. LOL at how difficult it is to reverse a string in R
     d <- sapply(lapply(strsplit(d, NULL), rev), paste, collapse="")
-    print(d)
-    session$sendCustomMessage(type = "myCallbackHandler", d)
+    
+    print(d) # We should see R  print the reversed string to its console
+    
+    session$sendCustomMessage(type = "myCallbackHandler", d) #myCallbackHanderler is defined in javascript - see the files in www/
   })
   
   

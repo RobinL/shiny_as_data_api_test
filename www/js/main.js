@@ -1,7 +1,5 @@
+ update_html = function(d) {
+          $("#output_div").html(d)
+        };
 
-
-
-
-Shiny.addCustomMessageHandler("myCallbackHandler", function(data) {
-  console.log(data);
-});
+      Shiny.addCustomMessageHandler("myCallbackHandler", update_html)
