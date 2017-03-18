@@ -12,7 +12,7 @@ shinyServer(function(input, output,session) {
     
     print(d) # We should see R  print the reversed string to its console
     
-    session$sendCustomMessage(type = "myCallbackHandler", d) #myCallbackHanderler is defined in javascript - see the files in www/
+    session$sendCustomMessage(type = "myCallbackHandler", list(a=1, b=2)) #myCallbackHanderler is defined in javascript - see the files in www/
   })
   
   
