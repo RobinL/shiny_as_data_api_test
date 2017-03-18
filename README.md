@@ -1,4 +1,4 @@
-# shiny_as_data_api_test
+# Shiny as data API
 Experimenting with abusing Shiny to provide a data API.
 
 This provides a barebones example of how you can build a website with standard html/js, but use R Shiny as a webserver that can perform computations in R.
